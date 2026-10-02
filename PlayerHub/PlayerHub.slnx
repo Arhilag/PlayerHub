@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PlayerHub.Application/PlayerHub.Application.csproj" />
+  <Project Path="PlayerHub.Domain/PlayerHub.Domain.csproj" />
+  <Project Path="PlayerHub.Infrastructure/PlayerHub.Infrastructure.csproj" />
+  <Project Path="PlayerHub.Web/PlayerHub.Web.csproj" />
+</Solution>
