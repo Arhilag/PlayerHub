@@ -8,6 +8,7 @@ namespace PlayerHub.Domain.Entities
         public const int DeviceIdMaxLength = 128;
         public const int NicknameMaxLength = 32;
 
+        public uint Version { get; private set; }
         public Guid Id { get; private set; }
         public string DeviceId { get; private set; } = null!;
         public string Nickname { get; private set; } = null!;
