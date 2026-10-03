@@ -1,7 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
-
-namespace PlayerHub.Domain.Entities
+﻿namespace PlayerHub.Domain.Entities
 {
     public class Player
     {
