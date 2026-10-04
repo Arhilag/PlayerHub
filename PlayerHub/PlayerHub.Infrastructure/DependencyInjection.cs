@@ -12,7 +12,7 @@ namespace PlayerHub.Infrastructure
             var connectionString = configuration.GetConnectionString("Default")
                 ?? throw new InvalidOperationException("Connection string 'Default' is not configured.");
 
-            services.AddDbContext<AppDbContext>(o => o.UseNpgsql(connectionString));
+            services.AddDbContext<AppDbContext>(o => o.UseNpgsql(connectionString).UseSnakeCaseNamingConvention());
 
             return services;
         }
