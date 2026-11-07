@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PlayerHub.Application.Abstractions;
 using PlayerHub.Infrastructure.Persistence;
 
 namespace PlayerHub.Infrastructure
@@ -13,6 +14,7 @@ namespace PlayerHub.Infrastructure
                 ?? throw new InvalidOperationException("Connection string 'Default' is not configured.");
 
             services.AddDbContext<AppDbContext>(o => o.UseNpgsql(connectionString).UseSnakeCaseNamingConvention());
+            services.AddScoped<IAppDbContext>(sp => sp.GetRequiredService<AppDbContext>());
 
             return services;
         }
