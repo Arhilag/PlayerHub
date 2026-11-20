@@ -25,8 +25,6 @@
             }
             ValidateDeviceId(deviceId);
             ValidateNickname(nickname);
-            ArgumentException.ThrowIfNullOrWhiteSpace(deviceId);
-            ArgumentException.ThrowIfNullOrWhiteSpace(nickname);
 
             Id = id;
             DeviceId = deviceId;
@@ -47,6 +45,14 @@
             Nickname = nickname;
             Level = level;
             Coins = coins;
+        }
+
+        public void Touch(DateTimeOffset now)
+        {
+            if (now > LastSeenAt)
+            {
+                LastSeenAt = now;
+            }
         }
 
         public void Ban()

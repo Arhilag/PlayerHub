@@ -1,4 +1,3 @@
-﻿
 namespace PlayerHub.Domain.Entities
 {
     public class AnalyticsEvent
@@ -19,11 +18,11 @@ namespace PlayerHub.Domain.Entities
         public AnalyticsEvent(
             Guid id, 
             Guid playerId, 
-            string name, 
-            string? parameters, 
-            DateTimeOffset clientTime, 
-            DateTimeOffset serverTime, 
-            Guid sessionId)
+            Guid sessionId,
+            string name,
+            string? parameters,
+            DateTimeOffset clientTime,
+            DateTimeOffset serverTime)
         {
             if (id == Guid.Empty)
             {
@@ -51,11 +50,11 @@ namespace PlayerHub.Domain.Entities
 
             Id = id;
             PlayerId = playerId;
+            SessionId = sessionId;
             Name = name;
             Parameters = json;
             ClientTime = clientTime;
             ServerTime = serverTime;
-            SessionId = sessionId;
         }
     }
 }
