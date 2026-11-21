@@ -7,6 +7,7 @@ namespace PlayerHub.Application.Abstractions
     {
         DbSet<Player> Players { get; }
         DbSet<AnalyticsEvent> AnalyticsEvents { get; }
+        DbSet<RefreshToken> RefreshTokens { get; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

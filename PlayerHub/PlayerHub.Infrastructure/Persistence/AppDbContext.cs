@@ -12,6 +12,7 @@ namespace PlayerHub.Infrastructure.Persistence
 
         public DbSet<Player> Players => Set<Player>();
         public DbSet<AnalyticsEvent> AnalyticsEvents => Set<AnalyticsEvent>();
+        public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
